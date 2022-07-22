@@ -38,11 +38,7 @@ namespace RCCWebApi.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data source=ritsqldb.database.windows.net;Initial Catalog=rasdb;User ID=ritadmin;Password=R1ts0lut10nS;Connection Timeout=30;");
-            }
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -295,7 +291,6 @@ namespace RCCWebApi.Models
                 entity.Property(e => e.OrderId).HasColumnName("ORDER_ID");
 
                 entity.Property(e => e.OrderCages)
-                    .HasColumnType("decimal(15, 3)")
                     .HasColumnName("ORDER_CAGES")
                     .HasDefaultValueSql("((0.000))");
 
@@ -310,11 +305,6 @@ namespace RCCWebApi.Models
                     .HasColumnName("UPDATED_DT");
 
                 entity.Property(e => e.UserId).HasColumnName("USER_ID");
-
-                entity.Property(e => e.Weight)
-                    .HasColumnType("decimal(15, 3)")
-                    .HasColumnName("WEIGHT")
-                    .HasDefaultValueSql("((0.000))");
             });
 
             modelBuilder.Entity<TritPurchase>(entity =>
