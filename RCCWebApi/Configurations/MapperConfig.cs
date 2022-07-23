@@ -10,7 +10,9 @@ namespace RCCWebApi.Configurations
         public MapperConfig()
         {
             CreateMap<ReadOnlyMobileLoginDto, TritMobileLogin>().ReverseMap();
+            CreateMap<TritMobileLogin, UpdatePassword>().ReverseMap();
             CreateMap<ReadOnlyDailyRates,TritDailyRate>().ReverseMap();
+
         }
     }
 }
