@@ -74,36 +74,36 @@ namespace RCCWebApi.Controllers
         }
 
 
-        // PUT: api/TritMobileLogins/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> PutTritMobileLogin(int id, UpdatePassword tritMobileLogin)
-        //{
-        //    if (id != tritMobileLogin.MobileLoginId)
-        //    {
-        //        return BadRequest();
-        //    }
-        //   var tritMobileLoginReset = mapper.Map<TritMobileLogin>(tritMobileLogin);
-        //    _context.Entry(tritMobileLoginReset).State = EntityState.Modified;
+       // PUT: api/TritMobileLogins/5
+         //To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutTritMobileLogin(int id, UpdatePassword tritMobileLogin)
+        {
+            if (id != tritMobileLogin.MobileLoginId)
+            {
+                return BadRequest();
+            }
+            var tritMobileLoginReset = mapper.Map<TritMobileLogin>(tritMobileLogin);
+            _context.Entry(tritMobileLoginReset).State = EntityState.Modified;
 
-        //    try
-        //    {
-        //        await _context.SaveChangesAsync();
-        //    }
-        //    catch (DbUpdateConcurrencyException)
-        //    {
-        //        if (!TritMobileLoginExists(id))
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
-        //            throw;
-        //        }
-        //    }
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!TritMobileLoginExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
-        //    return NoContent();
-        //}
+            return NoContent();
+        }
 
         // POST: api/TritMobileLogins
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
