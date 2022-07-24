@@ -11,7 +11,6 @@ using RCCWebApi.Models;
 
 namespace RCCWebApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class TritDailyRatesController : ControllerBase
     {
