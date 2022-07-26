@@ -11,7 +11,9 @@ using RCCWebApi.Models;
 
 namespace RCCWebApi.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
+
     public class TritMobileLoginsController : ControllerBase
     {
         private readonly rasdbContext _context;
@@ -75,7 +77,7 @@ namespace RCCWebApi.Controllers
 
        // PUT: api/TritMobileLogins/5
          //To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
+        [HttpPost("resetpassword")]
         public async Task<IActionResult> PutTritMobileLogin(int id, UpdatePassword tritMobileLogin)
         {
             if (id != tritMobileLogin.MobileLoginId)

@@ -295,7 +295,7 @@ namespace RCCWebApi.Models
                     .HasDefaultValueSql("((0.000))");
 
                 entity.Property(e => e.OrderDate)
-                    .HasColumnType("datetime")
+                    .HasColumnType("date")
                     .HasColumnName("ORDER_DATE");
 
                 entity.Property(e => e.UpdatedBy).HasColumnName("UPDATED_BY");
