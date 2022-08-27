@@ -35,6 +35,16 @@ namespace RCCWebApi.Controllers
             }
             return await _context.TritOrders.ToListAsync();
         }
+
+        [HttpGet("getTopTenOrderRecords")]
+        public async Task<ActionResult<IEnumerable<TritOrder>>> GetTopTenOrderRecords(int userid)
+        {
+            if (_context.TritOrders == null)
+            {
+                return NotFound();
+            }
+            return await _context.TritOrders.Where(x => x.UserId == userid).Take(5).OrderBy(x=>x.OrderDate).ToListAsync();
+        }
         [HttpGet("isOrderPresent")]
         public async Task<ActionResult> GetIsOrderPresent(int userid, DateTime date)
         {
@@ -53,6 +63,14 @@ namespace RCCWebApi.Controllers
             {
                 return StatusCode(StatusCodes.Status200OK, new { message = "Already Ordered",order = isOrderPresent , isOrderPresent=true });
             }
+        }
+
+        [HttpGet("getLatestTenOrders")]
+        public async Task<ActionResult> GetLatestTenOrders(int userid)
+        {
+            var x = await _context.TritOrders.Where(x => x.UserId == userid).OrderByDescending(c => c.OrderDate).Take(10).ToListAsync();
+           return StatusCode(StatusCodes.Status200OK, new { orders = x});
+
         }
         // GET: api/TritOrders/5
         [HttpGet("{id}")]

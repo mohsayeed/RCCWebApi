@@ -38,7 +38,7 @@ namespace RCCWebApi.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+          
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -46,7 +46,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritAccount>(entity =>
             {
                 entity.HasKey(e => e.AccountId)
-                    .HasName("PK__TRIT_ACC__05B22F60E9A245A6");
+                    .HasName("PK__TRIT_ACC__05B22F609FBCDB86");
 
                 entity.ToTable("TRIT_ACCOUNT");
 
@@ -104,19 +104,19 @@ namespace RCCWebApi.Models
                     .WithMany(p => p.TritAccountUpdatedByNavigations)
                     .HasForeignKey(d => d.UpdatedBy)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_ACCO__UPDAT__0C85DE4D");
+                    .HasConstraintName("FK__TRIT_ACCO__UPDAT__14270015");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.TritAccountUsers)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_ACCO__USER___0D7A0286");
+                    .HasConstraintName("FK__TRIT_ACCO__USER___151B244E");
             });
 
             modelBuilder.Entity<TritCommonErrorLog>(entity =>
             {
                 entity.HasKey(e => e.CommonErrorLogId)
-                    .HasName("PK__TRIT_COM__37DF0A4F85703DEE");
+                    .HasName("PK__TRIT_COM__37DF0A4FA43E2E68");
 
                 entity.ToTable("TRIT_COMMON_ERROR_LOG");
 
@@ -145,7 +145,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritDailyRate>(entity =>
             {
                 entity.HasKey(e => e.DailyRateId)
-                    .HasName("PK__TRIT_DAI__413D5BCE7697C7E0");
+                    .HasName("PK__TRIT_DAI__413D5BCEC65553E1");
 
                 entity.ToTable("TRIT_DAILY_RATES");
 
@@ -178,13 +178,13 @@ namespace RCCWebApi.Models
                 entity.HasOne(d => d.UpdatedByNavigation)
                     .WithMany(p => p.TritDailyRates)
                     .HasForeignKey(d => d.UpdatedBy)
-                    .HasConstraintName("FK__TRIT_DAIL__UPDAT__3B40CD36");
+                    .HasConstraintName("FK__TRIT_DAIL__UPDAT__160F4887");
             });
 
             modelBuilder.Entity<TritDefaultRate>(entity =>
             {
                 entity.HasKey(e => e.DefaultRateId)
-                    .HasName("PK__TRIT_DEF__ECB5162978EEDF86");
+                    .HasName("PK__TRIT_DEF__ECB51629B07DE5AC");
 
                 entity.ToTable("TRIT_DEFAULT_RATE");
 
@@ -202,7 +202,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritLogin>(entity =>
             {
                 entity.HasKey(e => e.LoginId)
-                    .HasName("PK__TRIT_LOG__476A024D658C49D3");
+                    .HasName("PK__TRIT_LOG__476A024DDA3162EA");
 
                 entity.ToTable("TRIT_LOGIN");
 
@@ -229,19 +229,19 @@ namespace RCCWebApi.Models
                 entity.HasOne(d => d.UpdatedByNavigation)
                     .WithMany(p => p.TritLoginUpdatedByNavigations)
                     .HasForeignKey(d => d.UpdatedBy)
-                    .HasConstraintName("FK__TRIT_LOGI__UPDAT__0E6E26BF");
+                    .HasConstraintName("FK__TRIT_LOGI__UPDAT__17036CC0");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.TritLoginUsers)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_LOGI__USER___0F624AF8");
+                    .HasConstraintName("FK__TRIT_LOGI__USER___2DE6D218");
             });
 
             modelBuilder.Entity<TritMobileLogin>(entity =>
             {
                 entity.HasKey(e => e.MobileLoginId)
-                    .HasName("PK__TRIT_MOB__255122C228F86025");
+                    .HasName("PK__TRIT_MOB__255122C27243D53E");
 
                 entity.ToTable("TRIT_MOBILE_LOGIN");
 
@@ -272,13 +272,13 @@ namespace RCCWebApi.Models
                 entity.HasOne(d => d.UpdatedByNavigation)
                     .WithMany(p => p.TritMobileLoginUpdatedByNavigations)
                     .HasForeignKey(d => d.UpdatedBy)
-                    .HasConstraintName("FK__TRIT_MOBI__UPDAT__3493CFA7");
+                    .HasConstraintName("FK__TRIT_MOBI__UPDAT__2EDAF651");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.TritMobileLoginUsers)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_MOBI__USER___3587F3E0");
+                    .HasConstraintName("FK__TRIT_MOBI__USER___2FCF1A8A");
             });
 
             modelBuilder.Entity<TritOrder>(entity =>
@@ -310,7 +310,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritPurchase>(entity =>
             {
                 entity.HasKey(e => e.PurchaseId)
-                    .HasName("PK__TRIT_PUR__AF7B9D5417E84B65");
+                    .HasName("PK__TRIT_PUR__AF7B9D54E02827A4");
 
                 entity.ToTable("TRIT_PURCHASE");
 
@@ -347,19 +347,19 @@ namespace RCCWebApi.Models
                     .WithMany(p => p.TritPurchaseUpdatedByNavigations)
                     .HasForeignKey(d => d.UpdatedBy)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_PURC__UPDAT__10566F31");
+                    .HasConstraintName("FK__TRIT_PURC__UPDAT__30C33EC3");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.TritPurchaseUsers)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_PURC__USER___114A936A");
+                    .HasConstraintName("FK__TRIT_PURC__USER___31B762FC");
             });
 
             modelBuilder.Entity<TritPurchasePayment>(entity =>
             {
                 entity.HasKey(e => e.PurchasePaymentId)
-                    .HasName("PK__TRIT_PUR__6212CEEC0AF37C19");
+                    .HasName("PK__TRIT_PUR__6212CEEC73A3DD00");
 
                 entity.ToTable("TRIT_PURCHASE_PAYMENT");
 
@@ -396,19 +396,19 @@ namespace RCCWebApi.Models
                     .WithMany(p => p.TritPurchasePaymentUpdatedByNavigations)
                     .HasForeignKey(d => d.UpdatedBy)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_PURC__UPDAT__123EB7A3");
+                    .HasConstraintName("FK__TRIT_PURC__UPDAT__32AB8735");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.TritPurchasePaymentUsers)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_PURC__USER___1332DBDC");
+                    .HasConstraintName("FK__TRIT_PURC__USER___339FAB6E");
             });
 
             modelBuilder.Entity<TritRole>(entity =>
             {
                 entity.HasKey(e => e.RoleId)
-                    .HasName("PK__TRIT_ROL__5AC4D22246468B31");
+                    .HasName("PK__TRIT_ROL__5AC4D222A5A728D6");
 
                 entity.ToTable("TRIT_ROLE");
 
@@ -423,7 +423,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritSale>(entity =>
             {
                 entity.HasKey(e => e.SalesId)
-                    .HasName("PK__TRIT_SAL__BAE7944505B6E417");
+                    .HasName("PK__TRIT_SAL__BAE79445DCA03071");
 
                 entity.ToTable("TRIT_SALES");
 
@@ -480,7 +480,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritSalesPayment>(entity =>
             {
                 entity.HasKey(e => e.SalesPaymentId)
-                    .HasName("PK__TRIT_SAL__4D769D041971A5A2");
+                    .HasName("PK__TRIT_SAL__4D769D042D1FD8F6");
 
                 entity.ToTable("TRIT_SALES_PAYMENT");
 
@@ -517,19 +517,19 @@ namespace RCCWebApi.Models
                     .WithMany(p => p.TritSalesPaymentUpdatedByNavigations)
                     .HasForeignKey(d => d.UpdatedBy)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_SALE__UPDAT__14270015");
+                    .HasConstraintName("FK__TRIT_SALE__UPDAT__3493CFA7");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.TritSalesPaymentUsers)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_SALE__USER___151B244E");
+                    .HasConstraintName("FK__TRIT_SALE__USER___3587F3E0");
             });
 
             modelBuilder.Entity<TritSmsMessage>(entity =>
             {
                 entity.HasKey(e => e.SmsMessageId)
-                    .HasName("PK__TRIT_SMS__446FE4F10EA90CEC");
+                    .HasName("PK__TRIT_SMS__446FE4F191D79297");
 
                 entity.ToTable("TRIT_SMS_Message");
 
@@ -551,7 +551,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritSmsRecipient>(entity =>
             {
                 entity.HasKey(e => e.SmsRecipientId)
-                    .HasName("PK__TRIT_SMS__6CA536D00B01B0B7");
+                    .HasName("PK__TRIT_SMS__6CA536D01FDF4C03");
 
                 entity.ToTable("TRIT_SMS_Recipient");
 
@@ -590,7 +590,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritSmsStatus>(entity =>
             {
                 entity.HasKey(e => e.SmsStatusId)
-                    .HasName("PK__TRIT_SMS__53AD9B68D30A3B3F");
+                    .HasName("PK__TRIT_SMS__53AD9B68032BBA2E");
 
                 entity.ToTable("TRIT_SMS_Status");
 
@@ -605,7 +605,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritUser>(entity =>
             {
                 entity.HasKey(e => e.UserId)
-                    .HasName("PK__TRIT_USE__F3BEEBFFDCC54F9E");
+                    .HasName("PK__TRIT_USE__F3BEEBFF37CD0F40");
 
                 entity.ToTable("TRIT_USER");
 
@@ -675,18 +675,18 @@ namespace RCCWebApi.Models
                 entity.HasOne(d => d.UpdatedByNavigation)
                     .WithMany(p => p.InverseUpdatedByNavigation)
                     .HasForeignKey(d => d.UpdatedBy)
-                    .HasConstraintName("FK__TRIT_USER__UPDAT__160F4887");
+                    .HasConstraintName("FK__TRIT_USER__UPDAT__367C1819");
 
                 entity.HasOne(d => d.UserCustomerVendorCodeNavigation)
                     .WithMany(p => p.TritUsers)
                     .HasForeignKey(d => d.UserCustomerVendorCode)
-                    .HasConstraintName("FK__TRIT_USER__USER___17036CC0");
+                    .HasConstraintName("FK__TRIT_USER__USER___37703C52");
             });
 
             modelBuilder.Entity<TritUserCustomerVendor>(entity =>
             {
                 entity.HasKey(e => e.UserCustomerVendorCode)
-                    .HasName("PK__TRIT_USE__CCE2E5899EB78F42");
+                    .HasName("PK__TRIT_USE__CCE2E58931C88269");
 
                 entity.ToTable("TRIT_USER_CUSTOMER_VENDOR");
 
@@ -704,7 +704,7 @@ namespace RCCWebApi.Models
             modelBuilder.Entity<TritUserRole>(entity =>
             {
                 entity.HasKey(e => e.UserRoleId)
-                    .HasName("PK__TRIT_USE__A50F1D20837AC866");
+                    .HasName("PK__TRIT_USE__A50F1D20E5AFC63D");
 
                 entity.ToTable("TRIT_USER_ROLE");
 
@@ -724,25 +724,25 @@ namespace RCCWebApi.Models
                     .WithMany(p => p.TritUserRoleCreatedByNavigations)
                     .HasForeignKey(d => d.CreatedBy)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_USER__CREAT__17F790F9");
+                    .HasConstraintName("FK__TRIT_USER__CREAT__3864608B");
 
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.TritUserRoles)
                     .HasForeignKey(d => d.RoleId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_USER__ROLE___18EBB532");
+                    .HasConstraintName("FK__TRIT_USER__ROLE___395884C4");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.TritUserRoleUsers)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TRIT_USER__USER___19DFD96B");
+                    .HasConstraintName("FK__TRIT_USER__USER___3A4CA8FD");
             });
 
             modelBuilder.Entity<TritWalkin>(entity =>
             {
                 entity.HasKey(e => e.WalkinsId)
-                    .HasName("PK__TRIT_WAL__2CD9FEF3E0450596");
+                    .HasName("PK__TRIT_WAL__2CD9FEF33EC7BCA7");
 
                 entity.ToTable("TRIT_WALKINS");
 
