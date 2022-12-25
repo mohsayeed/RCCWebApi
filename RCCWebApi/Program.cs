@@ -18,13 +18,17 @@ builder.Services.AddAutoMapper(typeof(MapperConfig));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "VZR Mobile API", Version = "v1" });
 }); 
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",b=>b.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
 });
+builder.Services.AddControllersWithViews()
+    .AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

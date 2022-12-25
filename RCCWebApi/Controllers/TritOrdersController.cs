@@ -203,6 +203,13 @@ namespace RCCWebApi.Controllers
             return NoContent();
         }
 
+        [HttpGet("getOrderDetailsByDate")]
+        public async Task<ActionResult<IEnumerable<usp_RIT_getCustomersOrdersByDateMobileResult>>> GetOrderDetailsByDate(DateTime date)
+        {
+           return await _context.Procedures.usp_RIT_getCustomersOrdersByDateMobileAsync(date);
+           
+        }
+
         private bool TritOrderExists(int id)
         {
             return (_context.TritOrders?.Any(e => e.OrderId == id)).GetValueOrDefault();

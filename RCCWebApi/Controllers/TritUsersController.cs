@@ -35,12 +35,17 @@ namespace RCCWebApi.Controllers
             {
                 return NotFound();
             }
-            return StatusCode(StatusCodes.Status200OK, new { userName = tritUser.UserName});
+            return StatusCode(StatusCodes.Status200OK, new { userName = tritUser.UserName , vendorCode = tritUser.UserCustomerVendorCode});
         }
 
-        // PUT: api/TritUsers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-       
+        [HttpGet("getAllUsers")]
+        public async Task<ActionResult<IEnumerable<UserDetail>>> GetAllUsers()
+        {
+
+            return await _context.UserDetails.ToListAsync();
+            
+        }
+
 
         private bool TritUserExists(int id)
         {

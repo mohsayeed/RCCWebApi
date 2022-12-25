@@ -5,12 +5,9 @@ using System.Collections.Generic;
 
 namespace RCCWebApi.Models
 {
-    public partial class TritCommonErrorLog
+    public partial class UserDetail
     {
-        public int CommonErrorLogId { get; set; }
         public string UserName { get; set; }
-        public string ProcedureName { get; set; }
-        public string ErrorMessage { get; set; }
-        public DateTime? ModifiedDate { get; set; }
+        public int UserId { get; set; }
     }
 }

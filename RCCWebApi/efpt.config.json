@@ -1,0 +1,121 @@
+﻿{
+   "CodeGenerationMode": 2,
+   "ContextClassName": "rasdbContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "RCCWebApi",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[TRIT_ACCOUNT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_COMMON_ERROR_LOG]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_DAILY_RATES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_DEFAULT_RATE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_LOGIN]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_MOBILE_LOGIN]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_ORDER]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_PURCHASE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_PURCHASE_PAYMENT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_ROLE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_SALES]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_SALES_PAYMENT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_SMS_Message]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_SMS_Recipient]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_SMS_Status]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_USER]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_USER_CUSTOMER_VENDOR]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_USER_ROLE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TRIT_WALKINS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User_Details]",
+         "ObjectType": 3
+      },
+      {
+         "Name": "[dbo].[usp_RIT_getCustomersOrdersByDateMobile]",
+         "ObjectType": 1
+      }
+   ],
+   "UiHint": "vzrrasdb.vzrrasdb",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

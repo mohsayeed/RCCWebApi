@@ -45,7 +45,7 @@ namespace RCCWebApi.Controllers
             {
                 return NotFound();
             }
-            var result = await _context.TritDailyRates.OrderByDescending(c => c.DailyDate).FirstOrDefaultAsync();
+            var result = await _context.TritDailyRates.OrderByDescending(c => c.DailyDate).OrderByDescending(d=>d.UpdatedDt).FirstOrDefaultAsync();
             return mapper.Map<ReadOnlyDailyRates>(result);
         }
 
